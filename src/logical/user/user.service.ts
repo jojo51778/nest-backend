@@ -19,7 +19,7 @@ export class UserService {
       const user = (await sequelize.query(sql, {
         type: Sequelize.QueryTypes.SELECT,
         raw: true,
-        logging: true,
+        logging: false,
       }))[0];
       return user;
     } catch (error) {
